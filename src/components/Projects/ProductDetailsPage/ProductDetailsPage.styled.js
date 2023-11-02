@@ -23,25 +23,6 @@ export const GalleryContainer = styled.div`
   gap: 5px;
 `;
 
-// export const OpenModalContainer = styled(ReactModal)`
-//   width: 935px;
-//   height: 535px;
-//   position: absolute;
-//   inset: 40px;
-//   border: 1px solid rgb(204, 204, 204);
-//   background: rgb(255, 255, 255);
-//   overflow: auto;
-//   border-radius: 15px;
-//   outline: none;
-//   padding: 20px;
-//   z-index: 5;
-//   margin: auto;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   justify-content: space-between;
-// `;
-
 export const OpenModalContainer = styled(ReactModal)`
   max-width: 1000px; /* Set maximum width */
   max-height: 800px; /* Set maximum height */
