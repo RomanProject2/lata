@@ -30,11 +30,13 @@ import { lazy } from "react";
 import { SharedLayout } from "./components/SharedLayout/SharedLayout";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import articlesData from "./components/Articles/ArticlesContent/articles";
+import boxesData from "./components/Projects/Content/boxs";
 import servicesData from "./components/Service/ServiceElements/services";
 import newsData from './components/News/NewsElements/newsElements'
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Projects = lazy(() => import("./pages/ProjectsPage"));
+const ProductDetailsPage = lazy(() => import("./components/Projects/ProductDetailsPage/ProductDetailsPage"));
 const Services = lazy(() => import("./pages/ServicesPage"));
 const ServiceElements = lazy(() => import("./components/Service/ServiceElements/ServiceElements"));
 const Equipment = lazy(() => import("./pages/EquipmentPage"));
@@ -59,8 +61,8 @@ export const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/services/:link" element={<ServiceElements services={servicesData} />} />
           <Route path="/projects" element={<Projects />} />
-          {/* <Route path="/projects/:photoId" element={<ProductDetailsPage photos={boxesData} />} />
-          <Route path="/projects/:photoId/buy" element={<BuyPage />} /> */}
+          <Route path="/projects/:photoId" element={<ProductDetailsPage photos={boxesData} />} /> />
+          {/* <Route path="/projects/:photoId/buy" element={<BuyPage />} /> */}
 
           <Route path="/obl" element={<Equipment />} />
           {/* <Route path="/obl/:photoId" element={<EquipmentDetails machenics={machenicsData} />} /> */}

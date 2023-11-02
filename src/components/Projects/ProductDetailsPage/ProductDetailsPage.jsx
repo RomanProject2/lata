@@ -1,4 +1,4 @@
-import TitleSection from 'components/TitleSection/TitleSection';
+import TitleSection from '../../TitleSection/TitleSection';
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { faCartShopping, faCircleArrowLeft, faCircleArrowRight, faClose, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
