@@ -29,10 +29,12 @@ import React, { useEffect } from "react";
 import { lazy } from "react";
 import { SharedLayout } from "./components/SharedLayout/SharedLayout";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom"; // Якщо ви використовуєте BrowserRouter
+import servicesData from "./components/Service/ServiceElements/services";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Projects = lazy(() => import("./pages/ProjectsPage"));
 const Services = lazy(() => import("./pages/ServicesPage"));
+const ServiceElements = lazy(() => import("./components/Service/ServiceElements/ServiceElements"));
 const Equipment = lazy(() => import("./pages/EquipmentPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const Question = lazy(() => import("./components/About/AboutUsMenu/Question"));
@@ -51,7 +53,7 @@ export const App = () => {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
           <Route path="/services" element={<Services />} />
-          {/* <Route path="/services/:link" element={<ServiceElements services={servicesData} />} /> */}
+          <Route path="/services/:link" element={<ServiceElements services={servicesData} />} />
           <Route path="/projects" element={<Projects />} />
           {/* <Route path="/projects/:photoId" element={<ProductDetailsPage photos={boxesData} />} />
           <Route path="/projects/:photoId/buy" element={<BuyPage />} /> */}
