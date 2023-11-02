@@ -48,7 +48,7 @@ export const App = () => {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/" element={<SharedLayout />}> */}
+        <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
           <Route path="/services" element={<Services />} />
           {/* <Route path="/services/:link" element={<ServiceElements services={servicesData} />} /> */}
@@ -72,7 +72,7 @@ export const App = () => {
 
 
 
-        {/* </Route> */}
+        </Route>
       </Routes>
     </Router>
   );
