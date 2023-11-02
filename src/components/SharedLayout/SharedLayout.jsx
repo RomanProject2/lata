@@ -20,7 +20,7 @@ export const SharedLayout = () => {
 
   return (
     <Container>
-      {/* <Header /> */}
+      <Header />
       <main>
         <ScrollToTop />
         <Suspense fallback={<Loader />}>

@@ -24,7 +24,7 @@
 //     </>
 //   );
 // };
-
+// eslint-disable-next-line
 import React, { useEffect } from "react";
 import { lazy } from "react";
 import { SharedLayout } from "./components/SharedLayout/SharedLayout";
@@ -37,7 +37,7 @@ const Equipment = lazy(() => import("./pages/EquipmentPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const Question = lazy(() => import("./components/About/AboutUsMenu/Question"));
 const Vacancies = lazy(() => import("./components/About/AboutUsMenu/Vacancies"));
-
+// eslint-disable-next-line
 const Feedback = lazy(() => import("./pages/FeedbackPage"));
 const News = lazy(() => import("./pages/NewsPage"));
 const Articles = lazy(() => import("./pages/ArticlesPage"));
