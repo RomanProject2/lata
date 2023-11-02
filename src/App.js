@@ -27,15 +27,20 @@
 
 import React, { useEffect } from "react";
 import { lazy } from "react";
+import { SharedLayout } from "./components/SharedLayout/SharedLayout";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom"; // Якщо ви використовуєте BrowserRouter
 
 const HomePage = lazy(() => import("./pages/HomePage"));
+const Services = lazy(() => import("./pages/ServicesPage"));
 
 export const App = () => {
   return (
     <Router>
       <Routes>
-        <Route index element={<HomePage />} />
+        {/* <Route path="/" element={<SharedLayout />}> */}
+          <Route index element={<HomePage />} />
+          <Route path="/services" element={<Services />} />
+        {/* </Route> */}
       </Routes>
     </Router>
   );
