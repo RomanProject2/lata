@@ -7,7 +7,7 @@ import NewsContainer from '../components/Home/News/NewsContainer';
 const HomePage = () => {
   return (
     <>
-      {/* <Middle /> */}
+      <Middle />
       <Collaction />
       <Container />
       <Experience />
