@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import TitleSection from 'components/TitleSection/TitleSection';
+import TitleSection from '../../TitleSection/TitleSection';
 import { RightSideBar, ContainerDiv, News, ContainerTitle, ContainerA, ContainerP, Container, LeftSideBar, ContainerNew, Img, TextContainer, Text, ContainerH5 } from './ArticlesContent.styled'
 
 const ArticlesContent = ({ articles }) => {

@@ -28,7 +28,8 @@
 import React, { useEffect } from "react";
 import { lazy } from "react";
 import { SharedLayout } from "./components/SharedLayout/SharedLayout";
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom"; // Якщо ви використовуєте BrowserRouter
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import articlesData from "./components/Articles/ArticlesContent/articles";
 import servicesData from "./components/Service/ServiceElements/services";
 import newsData from './components/News/NewsElements/newsElements'
 
@@ -45,6 +46,7 @@ const Feedback = lazy(() => import("./pages/FeedbackPage"));
 const News = lazy(() => import("./pages/NewsPage"));
 const NewElements = lazy(() => import("./components/News/NewsElements/NewElements"));
 const Articles = lazy(() => import("./pages/ArticlesPage"));
+const ArticlesContent = lazy(() => import("./components/Articles/ArticlesContent/ArticlesContent"));
 const Contacts = lazy(() => import("./pages/ContactsPage/Contacts"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
@@ -72,6 +74,7 @@ export const App = () => {
           <Route path="/news/:link" element={<NewElements news={newsData} />} />
 
           <Route path="/articles" element={<Articles />} />
+          <Route path="/articles/:link" element={<ArticlesContent articles={articlesData} />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<NotFound />} />
 
