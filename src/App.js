@@ -74,7 +74,7 @@ export const App = () => {
           <Route path="/company/questions" element={<Question />} />
           <Route path="/company/vacancies" element={<Vacancies />} />
 
-          {/* <Route path="/reviews" element={<Feedback />} /> */}
+          <Route path="/reviews" element={<Feedback />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/:link" element={<NewElements news={newsData} />} />
 
