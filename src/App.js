@@ -38,6 +38,12 @@ const AboutPage = lazy(() => import("./pages/AboutPage"));
 const Question = lazy(() => import("./components/About/AboutUsMenu/Question"));
 const Vacancies = lazy(() => import("./components/About/AboutUsMenu/Vacancies"));
 
+const Feedback = lazy(() => import("./pages/FeedbackPage"));
+const News = lazy(() => import("./pages/NewsPage"));
+const Articles = lazy(() => import("./pages/ArticlesPage"));
+const Contacts = lazy(() => import("./pages/ContactsPage/Contacts"));
+const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
+
 export const App = () => {
   return (
     <Router>
@@ -56,6 +62,14 @@ export const App = () => {
           <Route path="/company" element={<AboutPage />} />
           <Route path="/company/questions" element={<Question />} />
           <Route path="/company/vacancies" element={<Vacancies />} />
+
+          {/* <Route path="/reviews" element={<Feedback />} /> */}
+          <Route path="/news" element={<News />} />
+
+          <Route path="/articles" element={<Articles />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="*" element={<NotFound />} />
+
 
 
         {/* </Route> */}
