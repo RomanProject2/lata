@@ -30,6 +30,7 @@ import { lazy } from "react";
 import { SharedLayout } from "./components/SharedLayout/SharedLayout";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom"; // Якщо ви використовуєте BrowserRouter
 import servicesData from "./components/Service/ServiceElements/services";
+import newsData from './components/News/NewsElements/newsElements'
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Projects = lazy(() => import("./pages/ProjectsPage"));
@@ -42,6 +43,7 @@ const Vacancies = lazy(() => import("./components/About/AboutUsMenu/Vacancies"))
 // eslint-disable-next-line
 const Feedback = lazy(() => import("./pages/FeedbackPage"));
 const News = lazy(() => import("./pages/NewsPage"));
+const NewElements = lazy(() => import("./components/News/NewsElements/NewElements"));
 const Articles = lazy(() => import("./pages/ArticlesPage"));
 const Contacts = lazy(() => import("./pages/ContactsPage/Contacts"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
@@ -67,6 +69,7 @@ export const App = () => {
 
           {/* <Route path="/reviews" element={<Feedback />} /> */}
           <Route path="/news" element={<News />} />
+          <Route path="/news/:link" element={<NewElements news={newsData} />} />
 
           <Route path="/articles" element={<Articles />} />
           <Route path="/contacts" element={<Contacts />} />
