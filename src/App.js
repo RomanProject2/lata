@@ -33,6 +33,7 @@ import articlesData from "./components/Articles/ArticlesContent/articles";
 import boxesData from "./components/Projects/Content/boxs";
 import servicesData from "./components/Service/ServiceElements/services";
 import newsData from './components/News/NewsElements/newsElements'
+import machenicsData from './components/Equipment/EquipmentContainer/machenics'
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Projects = lazy(() => import("./pages/ProjectsPage"));
@@ -40,6 +41,7 @@ const ProductDetailsPage = lazy(() => import("./components/Projects/ProductDetai
 const Services = lazy(() => import("./pages/ServicesPage"));
 const ServiceElements = lazy(() => import("./components/Service/ServiceElements/ServiceElements"));
 const Equipment = lazy(() => import("./pages/EquipmentPage"));
+const EquipmentDetails = lazy(() => import("./components/Equipment/EquipmentDetails/EquipmentDetails"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const Question = lazy(() => import("./components/About/AboutUsMenu/Question"));
 const Vacancies = lazy(() => import("./components/About/AboutUsMenu/Vacancies"));
@@ -66,7 +68,7 @@ export const App = () => {
           <Route path="/projects/:photoId/buy" element={<BuyPage />} />
 
           <Route path="/obl" element={<Equipment />} />
-          {/* <Route path="/obl/:photoId" element={<EquipmentDetails machenics={machenicsData} />} /> */}
+          <Route path="/obl/:photoId" element={<EquipmentDetails machenics={machenicsData} />} />
 
           <Route path="/company" element={<AboutPage />} />
           <Route path="/company/questions" element={<Question />} />
