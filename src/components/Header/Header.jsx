@@ -22,6 +22,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/auth/authOperations';
 import { setName } from '../../redux/auth/authSelectors';
 import Logo from '../Logo/Logo';
+import { toast } from 'react-toastify';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -79,8 +80,10 @@ const Header = () => {
     try {
       dispatch(logout());
       navigate('/');
+      toast.success('Ви успішно розлогінились');
     } catch (error) {
       console.log('Сталася помилка під час виходу:', error);
+      toast.error('Під час розлогінення сталася помилка');
     }
   };
 

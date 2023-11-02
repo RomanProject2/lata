@@ -1,30 +1,3 @@
-// import React, { useEffect } from "react";
-// import { Routes, Route } from "react-router-dom";
-// import { lazy } from "react";
-
-// const HomePage = lazy(() => import("./pages/HomePage"));
-
-
-// export const App = () => {
-
-//   // const dispatch = useDispatch();
-
-//   // useEffect(() => {
-//   //   const accessToken = localStorage.getItem('accessToken');
-//   //   accessToken && dispatch(refreshUser());
-//   // }, [dispatch]);
-
-//   return (
-//     <>
-//       <Routes>
-//         {/* <Route path="/" element={<SharedLayout />}> */}
-//           <Route index element={<HomePage />} />
-//         {/* </Route> */}
-//       </Routes>
-//     </>
-//   );
-// };
-// eslint-disable-next-line
 import React, { useEffect } from "react";
 import { lazy } from "react";
 import { SharedLayout } from "./components/SharedLayout/SharedLayout";
@@ -45,7 +18,6 @@ const EquipmentDetails = lazy(() => import("./components/Equipment/EquipmentDeta
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const Question = lazy(() => import("./components/About/AboutUsMenu/Question"));
 const Vacancies = lazy(() => import("./components/About/AboutUsMenu/Vacancies"));
-// eslint-disable-next-line
 const Feedback = lazy(() => import("./pages/FeedbackPage"));
 const News = lazy(() => import("./pages/NewsPage"));
 const NewElements = lazy(() => import("./components/News/NewsElements/NewElements"));
