@@ -51,6 +51,7 @@ const Articles = lazy(() => import("./pages/ArticlesPage"));
 const ArticlesContent = lazy(() => import("./components/Articles/ArticlesContent/ArticlesContent"));
 const Contacts = lazy(() => import("./pages/ContactsPage/Contacts"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
+const BuyPage = lazy(() => import("./pages/BuyPage"))
 
 export const App = () => {
   return (
@@ -61,8 +62,8 @@ export const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/services/:link" element={<ServiceElements services={servicesData} />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:photoId" element={<ProductDetailsPage photos={boxesData} />} /> />
-          {/* <Route path="/projects/:photoId/buy" element={<BuyPage />} /> */}
+          <Route path="/projects/:photoId" element={<ProductDetailsPage photos={boxesData} />} />
+          <Route path="/projects/:photoId/buy" element={<BuyPage />} />
 
           <Route path="/obl" element={<Equipment />} />
           {/* <Route path="/obl/:photoId" element={<EquipmentDetails machenics={machenicsData} />} /> */}
