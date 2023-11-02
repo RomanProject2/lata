@@ -31,7 +31,12 @@ import { SharedLayout } from "./components/SharedLayout/SharedLayout";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom"; // Якщо ви використовуєте BrowserRouter
 
 const HomePage = lazy(() => import("./pages/HomePage"));
+const Projects = lazy(() => import("./pages/ProjectsPage"));
 const Services = lazy(() => import("./pages/ServicesPage"));
+const Equipment = lazy(() => import("./pages/EquipmentPage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const Question = lazy(() => import("./components/About/AboutUsMenu/Question"));
+const Vacancies = lazy(() => import("./components/About/AboutUsMenu/Vacancies"));
 
 export const App = () => {
   return (
@@ -40,6 +45,19 @@ export const App = () => {
         {/* <Route path="/" element={<SharedLayout />}> */}
           <Route index element={<HomePage />} />
           <Route path="/services" element={<Services />} />
+          {/* <Route path="/services/:link" element={<ServiceElements services={servicesData} />} /> */}
+          <Route path="/projects" element={<Projects />} />
+          {/* <Route path="/projects/:photoId" element={<ProductDetailsPage photos={boxesData} />} />
+          <Route path="/projects/:photoId/buy" element={<BuyPage />} /> */}
+
+          <Route path="/obl" element={<Equipment />} />
+          {/* <Route path="/obl/:photoId" element={<EquipmentDetails machenics={machenicsData} />} /> */}
+
+          <Route path="/company" element={<AboutPage />} />
+          <Route path="/company/questions" element={<Question />} />
+          <Route path="/company/vacancies" element={<Vacancies />} />
+
+
         {/* </Route> */}
       </Routes>
     </Router>
