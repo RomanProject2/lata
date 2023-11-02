@@ -8,6 +8,10 @@ import servicesData from "./components/Service/ServiceElements/services";
 import newsData from './components/News/NewsElements/newsElements'
 import machenicsData from './components/Equipment/EquipmentContainer/machenics'
 
+import { useDispatch } from "react-redux";
+import { refreshUser } from "./redux/auth/authOperations.js";
+
+
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Projects = lazy(() => import("./pages/ProjectsPage"));
 const ProductDetailsPage = lazy(() => import("./components/Projects/ProductDetailsPage/ProductDetailsPage"));
@@ -29,6 +33,14 @@ const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 const BuyPage = lazy(() => import("./pages/BuyPage"))
 
 export const App = () => {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem('accessToken');
+    accessToken && dispatch(refreshUser());
+  }, [dispatch]);
+
   return (
     <Router>
       <Routes>
