@@ -51,6 +51,7 @@ const News = lazy(() => import("./pages/NewsPage"));
 const NewElements = lazy(() => import("./components/News/NewsElements/NewElements"));
 const Articles = lazy(() => import("./pages/ArticlesPage"));
 const ArticlesContent = lazy(() => import("./components/Articles/ArticlesContent/ArticlesContent"));
+const AuthPage = lazy(() => import("./pages/AuthPage"));
 const Contacts = lazy(() => import("./pages/ContactsPage/Contacts"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 const BuyPage = lazy(() => import("./pages/BuyPage"))
@@ -61,30 +62,24 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
+          <Route path="/auth/:id" element={<AuthPage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:link" element={<ServiceElements services={servicesData} />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:photoId" element={<ProductDetailsPage photos={boxesData} />} />
           <Route path="/projects/:photoId/buy" element={<BuyPage />} />
-
           <Route path="/obl" element={<Equipment />} />
           <Route path="/obl/:photoId" element={<EquipmentDetails machenics={machenicsData} />} />
-
           <Route path="/company" element={<AboutPage />} />
           <Route path="/company/questions" element={<Question />} />
           <Route path="/company/vacancies" element={<Vacancies />} />
-
           <Route path="/reviews" element={<Feedback />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/:link" element={<NewElements news={newsData} />} />
-
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/:link" element={<ArticlesContent articles={articlesData} />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<NotFound />} />
-
-
-
         </Route>
       </Routes>
     </Router>
