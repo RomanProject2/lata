@@ -71,12 +71,7 @@ const Footer = () => {
       </Container>
       <div>
         <SideContainer>
-          <A
-            href="https://github.com/Hnatiak"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Розробка сайту Hnatiak Roman"
-          >
+          <A href="https://github.com/Hnatiak" target="_blank" rel="noopener noreferrer" title="Розробка сайту Hnatiak Roman">
             © Розробка сайту Hnatiak Roman
           </A>
           <SocialMedia>

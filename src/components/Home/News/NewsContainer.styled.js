@@ -110,6 +110,7 @@ export const ContainerAButton = styled(NavLink)`
     border-radius: 5px;
     color: #000;
     padding: 6px 12px;
+    transition: background 0.2s ease-in;
     &:hover {
         background: #656565;
         color: #fff;

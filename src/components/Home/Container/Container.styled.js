@@ -32,6 +32,7 @@ export const Svg = styled(FontAwesomeIcon)`
 export const ContainerDiv = styled.div`
     text-align: center;
     margin-bottom: 10px;
+    transition: transform 0.2s ease-in;
 
     &:hover {
         transform: scale(1.02);

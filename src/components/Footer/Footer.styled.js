@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { NavLink } from 'react-router-dom';
 
 export const FooterContainer = styled.footer`
     display: flex;
@@ -77,6 +76,7 @@ export const LinkLi = styled.li`
 `;
 
 export const A = styled.a`
+    transition: color 0.2s ease-in;
     &:hover{
         color: #9AC43C;
     }
